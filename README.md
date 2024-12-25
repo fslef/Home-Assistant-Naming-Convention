@@ -23,8 +23,8 @@ Ce guide définit une méthodologie claire pour standardiser la configuration de
 - **Format** : `[Action] - [Catégorie] - [Zone / Entité] - [Texte Libre]`
 - **Exemples** :
   - `Allumer - Eclairage - Couloir - si mouvement` : Allume les lumières du couloir lorsqu'un mouvement est détecté.
-  - `Regler - cvc - poel a pellet sur mode absent` : Régle le poele en mode absent
-  - `Désactiver - Arrosage - Jardin - si pluie_detectée` : Désactive l'arrosage du jardin lorsqu'il pleut.
+  - `Regler - cvc - poele - sur mode absent` : Régle le poele en mode absent
+  - `Désactiver - Arrosage - Jardin - si pluie detectée` : Désactive l'arrosage du jardin lorsqu'il pleut.
 
 ### 1.3 Scripts
 - **Format** : `[Zone] - [Catégorie] - [Action] - [Contexte ou Texte Libre]`
