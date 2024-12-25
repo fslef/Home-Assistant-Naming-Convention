@@ -34,7 +34,7 @@ Identifie le domaine fonctionnel principal de l’automatisation.
   - **Sécurité** : Alarmes, serrures, caméras, et détection d’intrusion.
   - **Énergie** : Automatisations visant l’économie d’énergie et la gestion des ressources.
   - **Divertissement** : Audio, vidéo, lumières d’ambiance ou autres scénarios ludiques.
-  - **Santé** : Gestion de la qualité de l'air, de l'humidité ou des lumières circadiennes.
+  - **Santé** : Gestion de la qualité de l'air, de l'humidité.
 
   Le prefix _Dev ou _Tst peuvent être utiliser pour les automatisations en cours de developpement
 
@@ -43,7 +43,7 @@ Précise la localisation ou le contexte dans lequel l’automatisation s’appli
 - **Liste standardisée pour les zones spécifiques** :
   - `Salon`, `Chambre`, `Cuisine`, `Salle_de_bain`, `Garage`, `Jardin`, `Entrée`, `Extérieur`.
 - **Liste standardisée pour les zones générales** :
-  - `Maison`, `Étage_1`, `Extérieur`, `Toutes_zones`.
+  - `Maison`, `RDC`, `Cuisine`, `WC`,`Couloir`,`Buanderie`,`SDB`,  `Extérieur`, `Toutes_zones`.
 - **Liste standardisée pour les contextes** :
   - `Nuit`, `Matin`, `Absence`, `Retour`, `Vacances`.
   - 
@@ -51,14 +51,13 @@ Précise la localisation ou le contexte dans lequel l’automatisation s’appli
 Décrit ce que fait l’automatisation. Cette section doit être descriptive mais concise.
 
 - **Liste standardisée pour les actions** :
-  - **Éclairage** : `Allumer_lumières`, `Éteindre_lumières`, `Tamiser_lumières`.
-  - **Climat** : `Réguler_température`, `Activer_ventilation`, `Réguler_humidité`.
+  - **Éclairage** : `Allumer`, `Éteindre`, `Régler`.
+  - **Climat** : `Activer`, `Désactiver`, `Régler`.
   - **Système** : `Activer`, `Désactiver`, `Synchroniser`, `Réinitialiser`.
-  - **Sécurité** : `Verrouiller_portes`, `Déclencher_alarme`, `Surveiller_caméra`.
+  - **Sécurité** : `Verrouiller`, `Déclencher`, `Surveiller`.
   - **Mouvement** : `Détecter_mouvement`, `Suivre_présence`.
-  - **Énergie** : `Réduire_consommation`, `Éteindre_appareils_veille`.
-  - **Divertissement** : `Activer_homecinéma`, `Lancer_playlist`, `Multiroom_audio`.
-  - **Santé** : `Purifier_air`, `Réguler_humidité`, `Activer_lumière_circadienne`.
+  - **Énergie** : `Allumer`, `Éteindre`.
+  - **Multimedia** : `Activer_homecinéma`, `Lancer_playlist`, `Multiroom_audio`.
 
 ### 2.4 Déclencheur (Obligatoire)
 Identifie la condition ou l’événement qui active l’automatisation.
@@ -70,10 +69,9 @@ Identifie la condition ou l’événement qui active l’automatisation.
   - `Sur_qualité_air` : Détection d’une mauvaise qualité de l’air.
 
 - **Liste standardisée pour les déclencheurs temporels** :
-  - `À_coucher_soleil` : Basé sur le coucher du soleil.
+  - `Au_coucher_soleil` : Basé sur le coucher du soleil.
   - `Au_levé_soleil` : Basé sur le lever du soleil.
-  - `À_heure_fixe` : Programmation à une heure précise.
-  - `Toutes_les_XX_minutes` : Déclenchement périodique.
+  - `Planifié` : Programmation à une heure précise ou déclenchement périodique.
 
 - **Liste standardisée pour les déclencheurs liés à la présence ou l’état** :
   - `En_absence` : Lorsque personne n’est détecté dans la maison.
@@ -88,8 +86,6 @@ Identifie la condition ou l’événement qui active l’automatisation.
 ### Contexte ou Texte Libre
 Le texte "Libre" permet d’ajouter des informations spécifiques ou des précisions non couvertes par les autres parties de la structure.
 `Quand l’utiliser:` Si un scénario ou un script nécessite une distinction particulière.
-Exemple :
-- Eteindre - Éclairage - Salon - Pendant les vacances (Pour un scénario spécifique aux vacances.)
-- Régler - CVC - Bureau - pour l'Hiver (Pour un réglage saisonnier précis.)
+
 
 
