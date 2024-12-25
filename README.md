@@ -20,11 +20,11 @@ Ce guide définit une méthodologie claire pour standardiser la configuration de
   - `camera_exterieur_surveillance` : Caméra de surveillance extérieure.
 
 ### 1.2 Automatisations
-- **Format** : `[Zone] - [Catégorie] - [Action] - [Déclencheur ou Texte Libre]`
+- **Format** : `[Action] - [Catégorie] - [Zone / Entité] - [Texte Libre]`
 - **Exemples** :
-  - `chambre_eclairage_allumer_mouvement` : Allume les lumières de la chambre lorsqu'un mouvement est détecté.
-  - `salon_cvc_diminuer_temperature_planifié` : Diminue la température du salon à une heure planifiée.
-  - `jardin_exterieur_activer_arrosage_pluie_detectée` : Active l'arrosage du jardin lorsqu'il pleut.
+  - `Allumer - Eclairage - Couloir - si mouvement` : Allume les lumières du couloir lorsqu'un mouvement est détecté.
+  - `Regler - cvc - poel a pellet sur mode absent` : Régle le poele en mode absent
+  - `Désactiver - Arrosage - Jardin - si pluie_detectée` : Désactive l'arrosage du jardin lorsqu'il pleut.
 
 ### 1.3 Scripts
 - **Format** : `[Zone] - [Catégorie] - [Action] - [Contexte ou Texte Libre]`
@@ -76,7 +76,10 @@ Ce guide définit une méthodologie claire pour standardiser la configuration de
 - `arreter` : Arrêter une action ou un système.
 
 ### Contexte ou Texte Libre
-Le **texte libre** apporte des précisions contextuelles (déclencheur, condition, objectif) pour différencier des éléments similaires. Il doit être concis, descriptif et éviter toute redondance.
-
+Le texte "Libre" permet d’ajouter des informations spécifiques ou des précisions non couvertes par les autres parties de la structure.
+`Quand l’utiliser:` Si un scénario ou un script nécessite une distinction particulière.
+Exemple :
+- Eteindre - Éclairage - Salon - Pendant les vacances (Pour un scénario spécifique aux vacances.)
+- Régler - CVC - Bureau - pour l'Hiver (Pour un réglage saisonnier précis.)
 
 
