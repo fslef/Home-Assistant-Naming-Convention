@@ -66,7 +66,7 @@ Identifie la condition ou l’événement qui active l’automatisation.
 - **Liste standardisée pour les déclencheurs basés sur des capteurs** :
   - `Sur_mouvement` : Mouvement détecté par un capteur PIR.
   - `Sur_ouverture` : Ouverture d’une porte ou d’une fenêtre détectée.
-  - `Sur_detection` : Autres types de detection
+  - `Sur_état` : Basé sur l'état d'un capteur
   - `Sur_température` : Une température spécifique est atteinte.
   - `Sur_qualité_air` : Détection d’une mauvaise qualité de l’air.
 
