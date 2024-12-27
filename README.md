@@ -60,30 +60,47 @@ Précise la localisation ou le contexte dans lequel l’automatisation s’appli
   - `Maison`, `RDC`, `Cuisine`, `WC`,`Couloir`,`Buanderie`,`SDB`,  `Extérieur`, `Toutes_zones`.
 
 
-### 2.4 Déclencheur
-Identifie la condition ou l’événement qui active l’automatisation.
+### 2.4 Condition
+#### Note sur la construction d'une condition
 
-- **Liste standardisée pour les déclencheurs basés sur des capteurs** :
-  - `Sur_mouvement` : Mouvement détecté par un capteur PIR.
-  - `Sur_ouverture` : Ouverture d’une porte ou d’une fenêtre détectée.
-  - `Sur_état` : Basé sur l'état d'un capteur
-  - `Sur_température` : Une température spécifique est atteinte.
-  - `Sur_qualité_air` : Détection d’une mauvaise qualité de l’air.
+La construction d'une condition dans les automatisations repose sur la combinaison de **préfixes**, **conditions unitaires** et **opérateurs logiques** pour exprimer des scénarios simples ou complexes. Cette structure permet de définir précisément les déclencheurs ou les contraintes des automatisations.
 
-- **Liste standardisée pour les déclencheurs temporels** :
-  - `Au_coucher_soleil` : Basé sur le coucher du soleil.
-  - `Au_levé_soleil` : Basé sur le lever du soleil.
-  - `Planifié` : Programmation à une heure précise ou déclenchement périodique.
+#### **Structure générale**
+- **Préfixes :** Spécifient le contexte logique ou temporel de la condition (ex. `Si_`, `Dans_`, etc.).
+- **Conditions unitaires :** Désignent les états ou événements qui déclenchent ou restreignent l’automatisation (ex. `Mouvement`, `Nuit`, `Vent`).
+- **Opérateurs logiques :** Permettent de combiner plusieurs conditions :
+  - `_et_` : Les deux conditions doivent être vraies.
+  - `_ou_` : Une ou les deux conditions doivent être vraies.
 
-- **Liste standardisée pour les déclencheurs liés à la présence ou l’état** :
-  - `En_absence` : Lorsque personne n’est détecté dans la maison.
-  - `En_présence` : Lorsque quelqu’un est détecté.
-  - `Sur_mode_vacances` : Lorsque le mode "vacances" est activé.
-  - `Sur_mode_nuit` : Lorsqu’un mode nuit est activé.
+#### Conditions
+- `Mouvement` : Mouvement détecté par un capteur PIR.
+- `Interrupteur` : Utilisation d’un interrupteur (activé ou désactivé).
+- `AccesOuverture` : Changement d’état d’une porte ou d’une fenêtre (ouvert ou fermé).
+- `Heure` : Déclenchement basé sur une heure spécifique.
+- `Presence` : Présence détectée dans une zone ou à domicile.
+- `Absence` : Absence détectée dans une zone ou à domicile.
+- `Temperature` : État du capteur de température (ex. supérieure ou inférieure à un seuil).
+- `Humidite` : État du capteur d'humidité (ex. supérieure ou inférieure à un seuil).
+- `EtatCapteur` : État générique d’un capteur personnalisé (ex. ouvert, fermé, activé, etc.).
+- `Nuit` : Exécution limitée à la nuit.
+- `Jour` : Exécution limitée au jour.
+- `Weekend` : Exécution limitée aux week-ends.
+- `JourFerie` : Condition basée sur le jour férié (est ou n'est pas un jour férié).
+- `SoleilHaut` : Le soleil est au-dessus de l’horizon.
+- `SoleilBas` : Le soleil est en dessous de l’horizon.
+- `ChangementDeZone` : Une personne change de zone (entre ou sort d’une zone spécifique).
+- `Pluie` : État du capteur indiquant de la pluie (donnée météorologique ou capteur physique).
+- `Vent` : État du capteur indiquant du vent au-dessus d’un seuil.
+- `QualiteAir` : État du capteur de qualité de l'air (ex. PM2.5, CO2, etc.).
+- `AlerteMeteo` : Détection d’une alerte météorologique (tempête, orage, neige, etc.).
 
-- **Liste standardisée pour les déclencheurs spécifiques aux appareils** :
-  - `Sur_appareil_on` : Lorsqu’un appareil est allumé.
-  - `Sur_fin_cycle` : Lorsque le cycle d’un appareil est terminé (ex. lave-linge).
+##### Préfixes
+- `Si_` : Pour exprimer une logique conditionnelle claire.
+- `Lorsque_` : Pour refléter des événements déclencheurs ponctuels.
+- `Dans_` : Pour des états ou contextes géographiques/temporaux (zones, périodes, etc.).
+- `Pendant_` : Pour des durées ou périodes spécifiques.
+- `Apres_` : Pour indiquer des actions après un événement ou un délai.
+- `Avant_` : Pour indiquer des actions avant un événement ou une limite temporelle.
 
 ### Contexte ou Texte Libre
 Le texte "Libre" permet d’ajouter des informations spécifiques ou des précisions non couvertes par les autres parties de la structure.
